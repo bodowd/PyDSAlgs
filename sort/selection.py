@@ -6,6 +6,7 @@ def selectionSort(alist):
 
     # like bubble sort, get the number of passes. After each pass, we know the last slot will have the right number
     # passnum will
+    # selection sort moves backwards through the list, thus range(len(alist)-1,0,-1)
     for passnum in range(len(alist)-1, 0, -1):
         max_position = 0
         # get the index of the max number
