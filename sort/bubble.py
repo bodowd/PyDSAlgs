@@ -18,6 +18,8 @@ on pass n-1 there is 1 comparison
 def bubbleSort(alist):
     # range starts at the len(alist)-1, goes to 0 but not including 0, and it goes backward by -1
     # because each pass will put the largest number remaining in the back, we cycle down from the len(alist)-1 to zero
+    # first pass goes all the way to the end of the list
+    # second pass doesn't need to go all the way to the end because we now know the largest number is at the end of list
     for passnum in range(len(alist)-1, 0, -1):
         for i in range(passnum):
             if alist[i]>alist[i+1]:
