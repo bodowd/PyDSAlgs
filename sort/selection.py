@@ -1,16 +1,22 @@
+"""
+
+O(n^2) like bubble sort but a little faster than bubble sort since there's only one exchange per round
+"""
 def selectionSort(alist):
-    # count backwards -- marks the right side edge of the list
-    for fillslot in range(len(alist)-1,0,-1):
-        positionOfMax=0
-        # start counting from the left side edge of the list and count towards the right side edge
-        for location in range(1, fillslot+1):
-            # find the largest position
-            if alist[location]>alist[positionOfMax]:
-                positionOfMax=location
-        # swap the largest position. Only one swap per iteration
-        temp = alist[fillslot]
-        alist[fillslot] = alist[positionOfMax]
-        alist[positionOfMax] = temp
+
+    # like bubble sort, get the number of passes. After each pass, we know the last slot will have the right number
+    # passnum will
+    for passnum in range(len(alist)-1, 0, -1):
+        max_position = 0
+        # get the index of the max number
+        for i in range(1, passnum+1):
+            if alist[i] > alist[max_position]:
+                max_position = i
+        # swap largest position. only one swap per iteration
+        # passnum starts from furthest position to 0 not including 0. So passnum will be the last index at this round
+        # we swap here
+        alist[passnum], alist[max_position] = alist[max_position], alist[passnum]
+
 
 
 
