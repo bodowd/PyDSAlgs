@@ -14,7 +14,7 @@ def selectionSort(alist):
                 max_position = i
         # swap largest position. only one swap per iteration
         # passnum starts from furthest position to 0 not including 0. So passnum will be the last index at this round
-        # we swap here
+        # we swap here with simultaneous assignment
         alist[passnum], alist[max_position] = alist[max_position], alist[passnum]
 
 
