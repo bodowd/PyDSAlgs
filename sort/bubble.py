@@ -28,7 +28,6 @@ def bubbleSort(alist):
                 # python allows you to do simultaneous assignment
                 alist[i], alist[i+1] = alist[i+1], alist[i]
 
-# print([i for i in range(5,0,-1)])
 alist = [54,26,93,17,77,31,44,55,20]
 tmp = alist.copy()
 print('Original list: ', tmp)
